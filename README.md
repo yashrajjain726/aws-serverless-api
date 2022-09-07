@@ -1,3 +1,3 @@
 # aws-serverless-api
 
-![](https://github.com/yashrajjain726/serve/blob/master/aws-serverless-api/awa-serverless.png?raw=true)
+![](https://raw.githubusercontent.com/yashrajjain726/aws-serverless-api/master/awa-serverless.png?raw=true)
