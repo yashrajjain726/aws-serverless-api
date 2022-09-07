@@ -1,0 +1,30 @@
+service: serverless-app
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+custom:
+  serverlessPluginTypescript:
+    tsConfigFileLocation: "./tsconfig.build.json"
+
+functions:
+  hello:
+    handler: functions/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+          cors:
+            origin: "*" # <-- Specify allowed origin
+            headers: # <-- Specify allowed headers
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
